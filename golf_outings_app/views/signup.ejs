@@ -1,0 +1,32 @@
+<% layout('layout', { title: 'Sign Up', session: session }); %>
+
+<h1 class="mb-3">Sign Up for <%= event.title %></h1>
+<p class="text-muted">Date & Time: <strong><%= new Date(event.date).toLocaleString('en-US', { dateStyle: 'long', timeStyle: 'short' }) %></strong></p>
+<p class="text-muted">Location: <strong><%= event.location %></strong></p>
+
+<form method="post" action="/signup/<%= event.id %>" class="row g-3 mt-4">
+  <div class="col-12 col-md-6">
+    <label class="form-label" for="name">Name *</label>
+    <input type="text" class="form-control" id="name" name="name" required>
+  </div>
+  <div class="col-12 col-md-6">
+    <label class="form-label" for="email">Email *</label>
+    <input type="email" class="form-control" id="email" name="email" required>
+  </div>
+  <div class="col-12 col-md-6">
+    <label class="form-label" for="phone">Contact #</label>
+    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Optional">
+  </div>
+  <div class="col-12 col-md-6">
+    <label class="form-label" for="handicap">Handicap</label>
+    <input type="number" class="form-control" id="handicap" name="handicap" placeholder="Optional" min="0">
+  </div>
+  <div class="col-12">
+    <label class="form-label" for="notes">Additional Notes</label>
+    <textarea class="form-control" id="notes" name="notes" rows="3" placeholder="Anything else we should know? (optional)"></textarea>
+  </div>
+  <div class="col-12 mt-3">
+    <button type="submit" class="btn btn-success">Submit</button>
+    <a href="/" class="btn btn-secondary ms-2">Cancel</a>
+  </div>
+</form>

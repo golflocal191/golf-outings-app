@@ -1,0 +1,27 @@
+<% layout('layout', { title: 'Create Event', session: session }); %>
+
+<h1 class="mb-4">Create a New Event</h1>
+<form method="post" action="/admin/events/new" class="col-md-8">
+  <% if (error) { %>
+    <div class="alert alert-danger"><%= error %></div>
+  <% } %>
+  <div class="mb-3">
+    <label class="form-label" for="title">Event Title</label>
+    <input type="text" class="form-control" id="title" name="title" required value="<%= event ? event.title : '' %>">
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="date">Date & Time</label>
+    <input type="datetime-local" class="form-control" id="date" name="date" required value="<%= event ? new Date(event.date).toISOString().slice(0,16) : '' %>">
+    <div class="form-text">Please enter the date and time in your local timezone.</div>
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="location">Location</label>
+    <input type="text" class="form-control" id="location" name="location" required value="<%= event ? event.location : '' %>">
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="description">Description</label>
+    <textarea class="form-control" id="description" name="description" rows="4"><%= event ? event.description : '' %></textarea>
+  </div>
+  <button type="submit" class="btn btn-success">Save Event</button>
+  <a href="/admin" class="btn btn-secondary ms-2">Cancel</a>
+</form>

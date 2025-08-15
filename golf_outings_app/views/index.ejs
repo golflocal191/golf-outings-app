@@ -1,0 +1,25 @@
+<% layout('layout', { title: 'Upcoming Golf Events', session: session }); %>
+
+<h1 class="mb-4">Upcoming Golf Events</h1>
+<p class="lead">Check out our upcoming golf outings and sign up to join us!</p>
+
+<div class="row row-cols-1 row-cols-md-2 g-4 mb-5">
+  <% if (events.length === 0) { %>
+    <p>No events scheduled yet. Please check back later.</p>
+  <% } %>
+  <% events.forEach(event => { %>
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title"><%= event.title %></h5>
+          <p class="card-text mb-1"><strong>Date & Time:</strong> <%= formatDate(event.date) %></p>
+          <p class="card-text mb-1"><strong>Location:</strong> <%= event.location %></p>
+          <% if (event.description) { %>
+            <p class="card-text"><%= event.description %></p>
+          <% } %>
+          <a href="/signup/<%= event.id %>" class="btn btn-primary mt-2">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  <% }); %>
+</div>

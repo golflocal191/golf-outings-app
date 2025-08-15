@@ -1,0 +1,33 @@
+{
+  "events": [
+    {
+      "id": "tue-2025-08-19",
+      "title": "Tuesday Golf Outing",
+      "date": "2025-08-19T17:00:00-07:00",
+      "location": "Three Lakes Golf Course, Malaga",
+      "description": "Weekly Tuesday 5 PM outing at Three Lakes Golf Course (Malaga)."
+    },
+    {
+      "id": "tue-2025-08-26",
+      "title": "Tuesday Golf Outing",
+      "date": "2025-08-26T17:00:00-07:00",
+      "location": "Three Lakes Golf Course, Malaga",
+      "description": "Weekly Tuesday 5 PM outing at Three Lakes Golf Course (Malaga)."
+    },
+    {
+      "id": "tue-2025-09-02",
+      "title": "Tuesday Golf Outing",
+      "date": "2025-09-02T17:00:00-07:00",
+      "location": "Three Lakes Golf Course, Malaga",
+      "description": "Weekly Tuesday 5 PM outing at Three Lakes Golf Course (Malaga)."
+    },
+    {
+      "id": "tue-2025-09-09",
+      "title": "Tuesday Golf Outing",
+      "date": "2025-09-09T17:00:00-07:00",
+      "location": "Three Lakes Golf Course, Malaga",
+      "description": "Weekly Tuesday 5 PM outing at Three Lakes Golf Course (Malaga)."
+    }
+  ],
+  "signups": []
+}

@@ -1,0 +1,19 @@
+{
+  "name": "golf-outings-app",
+  "version": "1.0.0",
+  "description": "A simple web application for managing golf outings, collecting sign‑ups and sending email notifications.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.4",
+    "ejs": "^3.1.9",
+    "lowdb": "^3.0.0",
+    "lodash-id": "^0.14.1",
+    "body-parser": "^1.20.2",
+    "nodemailer": "^6.9.5",
+    "dotenv": "^16.3.1",
+    "express-session": "^1.17.3"
+  }
+}

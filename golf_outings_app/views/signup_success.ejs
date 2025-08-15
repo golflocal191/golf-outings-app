@@ -1,0 +1,11 @@
+<% layout('layout', { title: 'Thank You', session: session }); %>
+
+<div class="alert alert-success" role="alert">
+  <h4 class="alert-heading">Thank you, <%= signup.name %>!</h4>
+  <p>Your sign‑up for <strong><%= event.title %></strong> has been received.</p>
+  <p>The event is scheduled for <strong><%= new Date(event.date).toLocaleString('en-US', { dateStyle: 'long', timeStyle: 'short' }) %></strong> at <strong><%= event.location %></strong>.</p>
+  <hr>
+  <p class="mb-0">We look forward to seeing you on the course!</p>
+</div>
+
+<a href="/" class="btn btn-primary">Back to Home</a>
